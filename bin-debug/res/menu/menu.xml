@@ -1,28 +1,27 @@
-<xml version="1.0" encoding="utf-8" ?>
-	<menu pageSize="">
-		<item>
-			<title></title>
-			<des></des>
-			<thumbnail></thumbnail>
-			<showImage></showImage>
-		</item>
-		<item>
-			<title></title>
-			<des></des>
-			<thumbnail></thumbnail>
-			<showImage></showImage>
-		</item>
-		<item>
-			<title></title>
-			<des></des>
-			<thumbnail></thumbnail>
-			<showImage></showImage>
-		</item>
-		<item>
-			<title></title>
-			<des></des>
-			<thumbnail></thumbnail>
-			<showImage></showImage>
-		</item>						
-	</menu>
-</xml>
+<?xml version="1.0" encoding="utf-8"?>
+<menu pageSize="">
+	<item>
+		<title>≤‚ ‘£±</title>
+		<des>√Ë ˆ£±</des>
+		<thumbnail></thumbnail>
+		<showImage></showImage>
+	</item>
+	<item>
+		<title></title>
+		<des></des>
+		<thumbnail></thumbnail>
+		<showImage></showImage>
+	</item>
+	<item>
+		<title></title>
+		<des></des>
+		<thumbnail></thumbnail>
+		<showImage></showImage>
+	</item>
+	<item>
+		<title></title>
+		<des></des>
+		<thumbnail></thumbnail>
+		<showImage></showImage>
+	</item>						
+</menu>

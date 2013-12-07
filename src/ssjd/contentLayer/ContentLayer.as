@@ -144,6 +144,8 @@ package ssjd.contentLayer
 			m_currentItem = m_contentDict[item.type];
 			// 开始添加
 			m_root.addChild(item.getContent());
+			// 显示相应的项
+			item.show();
 			// 通知加载完成
 			notifyItemInit();
 		}

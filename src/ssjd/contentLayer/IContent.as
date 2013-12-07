@@ -4,10 +4,11 @@ package ssjd.contentLayer
 
 	public interface IContent
 	{
-		function init(display : DisplayObjectContainer) : void;
-		function set baseDir(dir : String) : void;
+		function init(display : DisplayObjectContainer) : void; 
 		function destroy() : void;
+		function show() : void;
 		function getContent() : DisplayObjectContainer;
 		function get type() : int;
+		function set baseDir(dir : String) : void;
 	}
 }
