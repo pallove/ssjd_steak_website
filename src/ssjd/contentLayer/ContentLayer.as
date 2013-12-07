@@ -11,8 +11,7 @@ package ssjd.contentLayer
 	
 	import g1.common.loader.SWFLoader;
 	
-	import ssjd.controlLayer.IContent;
-	import ssjd.controlLayer.menu.Menu;
+	import ssjd.contentLayer.menu.Menu;
 
 	public class ContentLayer
 	{
@@ -200,7 +199,7 @@ package ssjd.contentLayer
 }
 import flash.display.DisplayObjectContainer;
 
-import ssjd.controlLayer.IContent;
+import ssjd.contentLayer.IContent;
 
 class ContentItem {
 	public var type : int;

@@ -1,4 +1,4 @@
-package ssjd.controlLayer
+package ssjd.contentLayer
 {
 	import flash.display.DisplayObjectContainer;
 

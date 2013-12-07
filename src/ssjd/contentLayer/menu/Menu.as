@@ -1,4 +1,4 @@
-package ssjd.controlLayer.menu
+package ssjd.contentLayer.menu
 {
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;
@@ -8,7 +8,7 @@ package ssjd.controlLayer.menu
 	import g1.common.loader.TextLoader;
 	
 	import ssjd.contentLayer.ContentLayer;
-	import ssjd.controlLayer.IContent;
+	import ssjd.contentLayer.IContent;
 
 	public class Menu implements IContent
 	{
