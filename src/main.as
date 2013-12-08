@@ -9,7 +9,7 @@ package
 	import ssjd.controlLayer.ControlLayer;
 	import ssjd.loadingLayer.LoadingLayer;
 	
-	[SWF(backgroundColor="#FFFFFF", frameRate="31", width="1280", height="800")]
+	[SWF(backgroundColor="#eeeeee", frameRate="31", width="1280", height="800")]
 	
 	public class main extends Sprite
 	{

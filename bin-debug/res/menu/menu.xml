@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu pageSize="">
 	<item>
-		<title>���ԣ�</title>
-		<des>������</des>
-		<thumbnail></thumbnail>
+		<title>青椒牛肉1</title>
+		<des>美味可口，等等等等</des>
+		<thumbsnail>item1.jpg</thumbsnail>
+		<showImage>bitem1.jpg</showImage>
+	</item>
+	<item>
+		<title>青椒牛肉2</title>
+		<des>美味可口，等等等等</des>
+		<thumbsnail>item2.jpg</thumbsnail>
+		<showImage>bitem2.jpg</showImage>
+	</item>
+	<item>
+		<title></title>
+		<des></des>
+		<thumbsnail></thumbsnail>
 		<showImage></showImage>
 	</item>
 	<item>
 		<title></title>
 		<des></des>
-		<thumbnail></thumbnail>
-		<showImage></showImage>
-	</item>
-	<item>
-		<title></title>
-		<des></des>
-		<thumbnail></thumbnail>
-		<showImage></showImage>
-	</item>
-	<item>
-		<title></title>
-		<des></des>
-		<thumbnail></thumbnail>
+		<thumbsnail></thumbsnail>
 		<showImage></showImage>
 	</item>						
 </menu>
