@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	
+<content>
+	<icon image="23950_pic2.png" cation="hello1" color="0,-50,0,0"/>
+	<icon image="23950_pic3.png" cation="hello2" color="0,-255,-100,-100"/>
+	<icon image="23950_pic4.png" cation="hello3" color="0,0,0,55"/>
+	<icon image="23950_pic5.png" cation="hello4" color="0,0,100,0"/>
+	<icon image="23950_pic6.png" cation="hello5" color="0,-255,100,214"/>
+	<icon image="23950_pic7.png" cation="hello6" color="0,-81,150,80"/>
+	<icon image="23950_pic8.png" cation="hello7" color="0,-81,0,80"/>
+</content>

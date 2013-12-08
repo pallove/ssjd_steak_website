@@ -3,13 +3,19 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
+	import flash.events.Event;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
+	import flash.net.URLRequestMethod;
+	import flash.net.URLVariables;
 	
 	import ssjd.bgLayer.BgLayer;
 	import ssjd.contentLayer.ContentLayer;
 	import ssjd.controlLayer.ControlLayer;
+	import ssjd.indexLayer.IndexLayer;
 	import ssjd.loadingLayer.LoadingLayer;
 	
-	[SWF(backgroundColor="#FFFFFF", frameRate="31", width="1280", height="800")]
+	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="980", height="760")]
 	
 	public class main extends Sprite
 	{
@@ -33,11 +39,37 @@ package
 			controlLayer = new ControlLayer();
 			controlLayer.init(addChild(new Sprite()) as Sprite);
 			
+			indexLayer = new IndexLayer();
+			indexLayer.setBaseDir("./res/index/");
+			indexLayer.init(addChild(new Sprite()) as Sprite);
+			
 			loadingLayer = new LoadingLayer();
 			loadingLayer.init(addChild(new Sprite()) as Sprite);
+			
+			//测试留言本
+			//查看留言内容地址
+			//管理密码:1234567
+			//http://www.dreamfairy.cn/test/zz/system.html
+			
+			/**
+			var loader:URLLoader = new URLLoader();  
+			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/savemsg.php");  
+			URLSt.method = URLRequestMethod.POST;  
+			var values:URLVariables = new URLVariables();  
+			values.Name  = "超超";  
+			values.Content = "你大爷";  
+			URLSt.data = values;  
+			loader.addEventListener(Event.COMPLETE, sendMsg);  
+			loader.load(URLSt);  **/
 		} 
 		
+		protected function sendMsg(event:Event):void
+		{
+			trace("发送聊天成功",event.toString());
+		}
+		
 		private var bgLayer : BgLayer;
+		private var indexLayer : IndexLayer;
 		private var contentLayer : ContentLayer;
 		private var controlLayer : ControlLayer;
 		private var loadingLayer : LoadingLayer;

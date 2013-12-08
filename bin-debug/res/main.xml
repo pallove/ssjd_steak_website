@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	
+<content>
+	<!-- general vars -->
+	<section name="settings">
+		<item name="textSelectable">true</item>
+		<item name="copyright"><![CDATA[<font color="#ab8a67" size="12" face="standard 07_55">FURNIX  (C) 2009  |  <a href="asfunction:_root.more_click_func, privacyPolicy">PRIVACY POLICY</a></font>]]></item>
+		<item name="companyName"><![CDATA[<font color="#ffffff" size="30" face="Virgo 01">FURNI<font color="#ffc200">X</font>]]></item>
+		<item name="slogan"><![CDATA[<font color="#ab8a67" size="8" face="standard 07_55">         LUXURY FURNITURE</font>]]></item>
+		<item name="tx_back"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">  BACK TO MAIN</font>]]></item>
+		<item name="tx_privacy"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55"> PRIVACY POLICY</font>]]></item>
+		<item name="more"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">    READ MORE</font>]]></item>
+		<item name="tx1"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">                        |                     |</font>]]></item>
+		<item name="tx2"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">              | </font>]]>
+</item>
+		<item name="tx3"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">|                                                  |</font>]]></item>
+		<item name="tx4"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">|                                                  |</font>]]></item>
+	
+		<image imageUrl="_pic2.png"/>
+		<image imageUrl="_pic3.png"/>
+		<image imageUrl="_pic4.png"/>
+		<image imageUrl="_pic5.png"/>
+		<image imageUrl="_pic6.png"/>
+		<image imageUrl="_pic7.png"/>
+		<image imageUrl="_pic8.png"/>
+				
+		<image imageUrl="_pic0.jpg"/>
+		<image imageUrl="_pic1.jpg"/>
+		<image imageUrl="_pic2.jpg"/>
+		<image imageUrl="_pic3.jpg"/>
+		<image imageUrl="_pic4.jpg"/>
+		<image imageUrl="_pic5.jpg"/>
+		<image imageUrl="_pic6.jpg"/>
+		<image imageUrl="_pic7.jpg"/>
+		<image imageUrl="_pic8.jpg"/>
+		<image imageUrl="_pic9.jpg"/>
+		<image imageUrl="_pic10.jpg"/>
+		<image imageUrl="_pic11.jpg"/>
+		<image imageUrl="_pic12.jpg"/>
+		<image imageUrl="_pic13.jpg"/>
+		<image imageUrl="_pic14.jpg"/>
+		<image imageUrl="_pic15.jpg"/>
+		<image imageUrl="_pic16.jpg"/>
+		<image imageUrl="_pic17.jpg"/>
+		<image imageUrl="_pic18.jpg"/>
+		<image imageUrl="_pic19.jpg"/>
+		<image imageUrl="_pic20.jpg"/>
+		<image imageUrl="_pic21.jpg"/>
+		<image imageUrl="_pic22.jpg"/>
+		<image imageUrl="_pic23.jpg"/>
+		<image imageUrl="_pic24.jpg"/>
+		<image imageUrl="_pic25.jpg"/>
+		<image imageUrl="_pic26.jpg"/>
+		<image imageUrl="_pic27.jpg"/>
+		<image imageUrl="_pic28.jpg"/>
+		<image imageUrl="_pic29.jpg"/>
+		<image imageUrl="_pic30.jpg"/>
+		<image imageUrl="_pic31.jpg"/>
+		<image imageUrl="_pic32.jpg"/>
+		<image imageUrl="_pic33.jpg"/>
+		<image imageUrl="_pic34.jpg"/>
+		<image imageUrl="_pic35.jpg"/>
+		<image imageUrl="_pic36.jpg"/>
+		<image imageUrl="_pic37.jpg"/>
+		<image imageUrl="_pic38.jpg"/>
+		<image imageUrl="_pic39.jpg"/>
+		<image imageUrl="_pic40.jpg"/>
+		<image imageUrl="_pic9.png"/>
+				
+	</section>
+	
+	<!-- menu -->
+<section name="menu">
+<link systemOrder="1"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">    HELLO</font>]]></link>       
+<link systemOrder="2"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">    CONTACTS</font>]]></link>
+<link systemOrder="3"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">      SOFA &<br>    BED ITEMS</font>]]></link>
+<link systemOrder="4"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">        BATH<br>  ACCESSORIES</font>]]></link>
+<link systemOrder="5"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">  KITCHEN SET</font>]]></link>
+<link systemOrder="6"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55">   CHAIR ITEMS</font>]]></link>
+<link systemOrder="7"><![CDATA[<font color="#ffffff" size="8" face="standard 07_55"> TABLE & DESK</font>]]></link>
+
+<link systemOrder="1"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">HELLO</font>]]></link>       
+<link systemOrder="2"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">CONTACTS</font>]]></link>
+<link systemOrder="3"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">SOFA & BED ITEMS</font>]]></link>
+<link systemOrder="4"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">BATH ACCESSORIES</font>]]></link>
+<link systemOrder="5"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">KITCHEN SET</font>]]></link>
+<link systemOrder="6"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">CHAIR ITEMS</font>]]></link>
+<link systemOrder="7"><![CDATA[<font color="#61503e" size="8" face="standard 07_55">TABLE & DESK</font>]]></link>
+
+</section>
+
+
+		   <!-- pages -->
+	<section name="pages">
+	
+		
+<page name="ABOUT US">
+
+<image imageUrl="_pic0.png" link="asfunction:link"/>
+
+
+<texts>
+
+<pageText><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">WELCOME TO OUR FURNITURE GALLERY</font>]]></pageText>
+
+<pageText><![CDATA[<font color="#827466" size="8" face="standard 07_55">FUSCE EUISMOD CONSEQUAT ANTEOREM IPSUM DOLOR SIT AMETELLENTESQUE SED DOLORLIQUAM CONGUE FERMENTUM NISLAURIS ACCUMSAN NULLA VEL DIASED IN LACUS UT ENIM ADIPISCING ALIQUETNULLA VENENATISIN PEDE MI, ALIQUET SIT AMET, EUISMOD IN,AUCTOR UT, LIGULALIQUAM DAPIBUS TINCIDUNT METUS<br>PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREMVESTIBULUM SED ANTEONEC SAGITTIS EUISM.</font><br><br>
+<font color="#ffffff" size="8" face="standard 07_55"><a href="asfunction:_root.more_click_func,0">{ MORE INFO }</a></font>]]></pageText>
+
+<pageText><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">PRODUCTS OF INTEREST</font>]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">FUSCE EUISMOD CONSEQUAT ANTEOREM</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">IPSUM DOLOR SIT AMETELLENTES</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">QUE SED DOLORLIQUAM CONGUE FERM</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">ENTUM NISLAURIS ACCUMSA</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">NULLA VEL DIASED IN LACUS UT ENIM</font></u></a>
+]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">FUSCE EUISMOD CSEQUAT ANTEORE</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">IPSUM DOLOR SIT AMETELLETES</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">QUE SED DOLORLIQUAM CONE FERM</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">ENTUM NISLAURIS ACUMSA</font></u></a>
+]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">ADIPISCING ALIQUETNULLA VENENA</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">TISIN PEDE MI, ALIQUET</font></u></a><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>  </font><u><font color="#cb6000" size="8" face="standard 07_55">SIT AMET EUISMOD IN,AUCTOR UTLIG</font></u></a>
+]]></pageText>
+
+
+<pageText><![CDATA[<font color="#ff005b" size="12" face="Arial">+  </font><font color="#b5b5b5" size="12" face="Arial"><a href="asfunction:_root.more_click_func,2"><u>View all works</u></a></font>]]></pageText>
+
+</texts>
+
+<link linkType="readMoreLink">
+<item name="title"><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">READ MORE 1</font>]]></item>
+<item name="linkText"><![CDATA[<font color="#827466" size="8" face="standard 07_55">
+LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PRAESENT VESTIBULUM MOLESTIE LACUS. AENEAN NONUMMY HEN-<br>DRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTURIENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC, LUCTUS A, LOREM. MAECENAS TRISTIQUE ORCI AC SEM. DUIS ULTRICIES PHARETRA MAGNA. DONEC ACCUMSAN MALESUADA ORCI. DONEC SIT AMET EROS.<br>LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. MAURIS FERMENTUM DICTUM MAGNA. SED LAOREET ALIQUAM LEO. UT TELLUS DOLOR, DAPIBUS EGET, ELEMENTUM VEL, CURSUS ELEIFEND, ELIT. AENEAN AUCTOR WISI ET URNA. ALIQUAM ERAT VOLUTPAT. DUIS<br>AC TURPIS. INTEGER RUTRUM ANTE EU LACUS.<br><br>
+QUISQUE NULLA. VESTIBULUM LIBERO NISL, PORTA VEL, SCELERISQUE EGET, MALESUADA AT, NEQUE. VIVAMUS EGET NIBH. ETIAM CURSUS<br>LEO VEL METUS. NULLA FACILISI. AENEAN NEC EROS. VESTIBULUM ANTE IPSUM PRIMIS IN FAUCIBUS ORCI LUCTUS ET ULTRICES POSUERE CUBILIA CURAE; SUSPENDISSE SOLLICITUDIN VELIT SED LEO. UT PHARETRA AUGUE NEC AUGUE. NAM ELIT MAGNA, HENDRERIT SIT AMET, TINCIDUNT AC, VIVERRA SED, NULLA. DONEC PORTA DIAM EU MASSA. QUISQUE DIAM LOREM, INTERDUM VITAE, DAPIBUS AC, SCELERISQUE VITAE, PEDE. DONEC EGET TELLUS NON ERAT LACINIA FERMENTUM. DONEC IN VELIT VEL IPSUM AUCTOR PULVINAR. PROIN ULLAMCORPER<br>URNA ET FELIS.VESTIBULUM IACULIS LACINIA EST. PROIN DICTUM ELEMENTUM VELIT. FUSCE EUISMOD CONSEQUAT ANTE. LOREM IPSUM<br>DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PELLENTESQUE SED DOLOR. ALIQUAM CONGUE FERMENTUM NISL.<br><br>
+MAURIS ACCUMSAN NULLA VEL DIAM. SED IN LACUS UT ENIM ADIPISCING ALIQUET. NULLA VENENATIS. IN PEDE MI, ALIQUET SIT AMET,<br>EUISMOD IN, AUCTOR UT, LIGULA. ALIQUAM DAPIBUS TINCIDUNT METUS. PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM. VESTIBULUM SED ANTE. DONEC SAGITTIS EUISMOD PURUS. SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT VOLUPTATEM ACCUSANTIUM DOLOREMQUE LAUDANTIUM, TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILLO INVENTORE VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO. NEMO ENIM IPSAM VOLUPTATEM QUIA VOLUPTAS SIT ASPERNATUR AUT ODIT AUT<br>FUGIT, SED QUIA CONSEQUUNTUR MAGNI DOLORES EOS QUI RATIONE VOLUPTATEM SEQUI NESCIUNT. NEQUE PORRO QUISQUAM EST. AENEAN NONUMMY HENDRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTURIENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC, LUCTUS A, LOREM. MAECENAS TRISTIQUE ORCI AC SEM. DUIS ULTRICIES PHARETRA MAGNA. DONEC ACCUMSAN MALESUADA ORCI. DONEC SIT AMET EROS.LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. MAURIS FERMENTUM DICTUM MAGNA. SED LAOREET ALIQUAM LEO. UT TELLUS DOLOR, DAPIBUS EGET, ELEMENTUM VEL, CURSUS ELEIFEND, ELIT. AENEAN AUCTOR WISI ET URNA. ALIQUAM ERAT VOLUTPAT. DUISAC TURPIS. INTEGER RUTRUM ANTE EU LACUS.<br> 
+</font>]]></item>
+</link>
+
+
+</page>
+
+<page name="CONTACTS">
+
+<image imageUrl="_pic1.png" link="asfunction:_root.more_click_func, 0" target="_blank"/>
+
+<texts>
+
+<pageText><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">CONTACT DETAILS OF OUR REGISTERED OFFICES</font>]]></pageText>
+
+<pageText><![CDATA[<font color="#827466" size="8" face="standard 07_55">THE COMPANY NAME INC.<br>
+8901 MARMORA ROAD,<br>
+GLASGOW, D04 89GR.<br><br>
+FREEPHONE:            +1 800 559 6580<br>
+TELEPHONE:            +1 959 603 6035<br>
+FAX:                        +1 504 889 9898<br>
+E-MAIL: </font><font color="#ffffff" size="8" face="standard 07_55"><a href="asfunction:link">{ MAIL@COMPANYNAME.COM }</a></font>]]></pageText>
+
+<pageText><![CDATA[<font color="#827466" size="8" face="standard 07_55">CUSTOMER SERVICE:<br>
+TELEPHONE:             +1 959 603 6035<br>
+FAX:               +1 101 889 9898<br>
+E-MAIL:</font><br>
+<font color="#ffffff" size="8" face="standard 07_55"><a href="asfunction:link">{ CUSTOMERS@COMPANYNAME.COM }</a></font>]]></pageText>
+
+<pageText><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">NO MATTER WHERE YOU'RE LOCATED, WE HAVE A LOT OF OFFICES WORLDWIDE</font>]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">GERMANY</font></u></a><br><br>
+<font color="#827466">VESTIBULUM IACULIS LACINIA EST.<br>PROIN DICTUM ELEMENTUM VELIT.</font><br><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">NORWAY</font></u></a><br><br>
+<font color="#827466">CONSECTETUER ADIPISCING ELIT. PELLENTESQUE SED DOLOR.</font>
+]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">IRELAND</font></u></a><br><br>
+<font color="#827466">Fusce euismod consequat ante.<br>Lorem ipsum dolor sit amet.</font><br><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">UNITED KINGDOM</font></u></a><br><br>
+<font color="#827466">ALIQUAM CONGUE FERMENTUM NISL.<br>MAURIS ACCUMSAN NULLA VEL.</font>
+]]></pageText>
+
+<pageText><![CDATA[
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">NEW ZEALAND</font></u></a><br><br>
+<font color="#827466">VESTIBULUM IACULIS LACINIA EST.<br>PROIN DICTUM ELEMENTUM VELIT.</font><br><br>
+<a href="asfunction:link"><font color="#ffffff" size="8" face="standard 07_55"> >>     </font><u><font color="#cb6000" size="8" face="standard 07_55">UNITED STATES OF AMERICA</font></u></a><br><br>
+<font color="#827466">NULLA VENENATIS. IN PEDE, ALIQUET<br>SIT AMET, EUISMOD IN, AUCTOR UT.</font>
+]]></pageText>
+
+</texts>
+
+<link linkType="readMoreLink">
+<item name="title"><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">READ MORE 1</font>]]></item>
+<item name="linkText"><![CDATA[<font color="#827466" size="8" face="standard 07_55">
+LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PRAESENT VESTIBULUM MOLESTIE LACUS. AENEAN NONUMMY HEN-<br>DRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTURIENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC, LUCTUS A, LOREM. MAECENAS TRISTIQUE ORCI AC SEM. DUIS ULTRICIES PHARETRA MAGNA. DONEC ACCUMSAN MALESUADA ORCI. DONEC SIT AMET EROS.<br>LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. MAURIS FERMENTUM DICTUM MAGNA. SED LAOREET ALIQUAM LEO. UT TELLUS DOLOR, DAPIBUS EGET, ELEMENTUM VEL, CURSUS ELEIFEND, ELIT. AENEAN AUCTOR WISI ET URNA. ALIQUAM ERAT VOLUTPAT. DUIS<br>AC TURPIS. INTEGER RUTRUM ANTE EU LACUS.<br><br>
+QUISQUE NULLA. VESTIBULUM LIBERO NISL, PORTA VEL, SCELERISQUE EGET, MALESUADA AT, NEQUE. VIVAMUS EGET NIBH. ETIAM CURSUS<br>LEO VEL METUS. NULLA FACILISI. AENEAN NEC EROS. VESTIBULUM ANTE IPSUM PRIMIS IN FAUCIBUS ORCI LUCTUS ET ULTRICES POSUERE CUBILIA CURAE; SUSPENDISSE SOLLICITUDIN VELIT SED LEO. UT PHARETRA AUGUE NEC AUGUE. NAM ELIT MAGNA, HENDRERIT SIT AMET, TINCIDUNT AC, VIVERRA SED, NULLA. DONEC PORTA DIAM EU MASSA. QUISQUE DIAM LOREM, INTERDUM VITAE, DAPIBUS AC, SCELERISQUE VITAE, PEDE. DONEC EGET TELLUS NON ERAT LACINIA FERMENTUM. DONEC IN VELIT VEL IPSUM AUCTOR PULVINAR. PROIN ULLAMCORPER<br>URNA ET FELIS.VESTIBULUM IACULIS LACINIA EST. PROIN DICTUM ELEMENTUM VELIT. FUSCE EUISMOD CONSEQUAT ANTE. LOREM IPSUM<br>DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PELLENTESQUE SED DOLOR. ALIQUAM CONGUE FERMENTUM NISL.<br><br>
+MAURIS ACCUMSAN NULLA VEL DIAM. SED IN LACUS UT ENIM ADIPISCING ALIQUET. NULLA VENENATIS. IN PEDE MI, ALIQUET SIT AMET,<br>EUISMOD IN, AUCTOR UT, LIGULA. ALIQUAM DAPIBUS TINCIDUNT METUS. PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM. VESTIBULUM SED ANTE. DONEC SAGITTIS EUISMOD PURUS. SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT VOLUPTATEM ACCUSANTIUM DOLOREMQUE LAUDANTIUM, TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILLO INVENTORE VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO. NEMO ENIM IPSAM VOLUPTATEM QUIA VOLUPTAS SIT ASPERNATUR AUT ODIT AUT<br>FUGIT, SED QUIA CONSEQUUNTUR MAGNI DOLORES EOS QUI RATIONE VOLUPTATEM SEQUI NESCIUNT. NEQUE PORRO QUISQUAM EST.
+ 
+</font>]]></item>
+</link>
+
+</page>
+
+<page name="SOFA & BED ITEMS">
+</page>
+
+<page name="BATH ACCESSORIES">
+</page>
+
+<page name="KITCHEN SET">
+</page>
+
+<page name="CHAIR ITEMS">
+</page>
+
+<page name="TABLE & DESK">
+</page>
+
+</section> 
+
+
+
+<!-- privacy policy -->
+<section name="privacyPolicy">
+<item name="pageTitle"><![CDATA[<font color="#ffffff" size="8" face="standard 07_65">PRIVACY POLICY</font>]]></item>
+<item name="pageText"><![CDATA[<font color="#827466" size="8" face="standard 07_55">
+LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PRAESENT VESTIBULUM MOLESTIE LACUS. AENEAN NONUMMY HEN-<br>DRERIT MAURIS. PHASELLUS PORTA. FUSCE SUSCIPIT VARIUS MI. CUM SOCIIS NATOQUE PENATIBUS ET MAGNIS DIS PARTURIENT MONTES, NASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. MORBI NUNC ODIO, GRAVIDA AT, CURSUS NEC, LUCTUS A, LOREM. MAECENAS TRISTIQUE ORCI AC SEM. DUIS ULTRICIES PHARETRA MAGNA. DONEC ACCUMSAN MALESUADA ORCI. DONEC SIT AMET EROS.<br>LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. MAURIS FERMENTUM DICTUM MAGNA. SED LAOREET ALIQUAM LEO. UT TELLUS DOLOR, DAPIBUS EGET, ELEMENTUM VEL, CURSUS ELEIFEND, ELIT. AENEAN AUCTOR WISI ET URNA. ALIQUAM ERAT VOLUTPAT. DUIS<br>AC TURPIS. INTEGER RUTRUM ANTE EU LACUS.<br><br>
+QUISQUE NULLA. VESTIBULUM LIBERO NISL, PORTA VEL, SCELERISQUE EGET, MALESUADA AT, NEQUE. VIVAMUS EGET NIBH. ETIAM CURSUS<br>LEO VEL METUS. NULLA FACILISI. AENEAN NEC EROS. VESTIBULUM ANTE IPSUM PRIMIS IN FAUCIBUS ORCI LUCTUS ET ULTRICES POSUERE CUBILIA CURAE; SUSPENDISSE SOLLICITUDIN VELIT SED LEO. UT PHARETRA AUGUE NEC AUGUE. NAM ELIT MAGNA, HENDRERIT SIT AMET, TINCIDUNT AC, VIVERRA SED, NULLA. DONEC PORTA DIAM EU MASSA. QUISQUE DIAM LOREM, INTERDUM VITAE, DAPIBUS AC, SCELERISQUE VITAE, PEDE. DONEC EGET TELLUS NON ERAT LACINIA FERMENTUM. DONEC IN VELIT VEL IPSUM AUCTOR PULVINAR. PROIN ULLAMCORPER<br>URNA ET FELIS.VESTIBULUM IACULIS LACINIA EST. PROIN DICTUM ELEMENTUM VELIT. FUSCE EUISMOD CONSEQUAT ANTE. LOREM IPSUM<br>DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PELLENTESQUE SED DOLOR. ALIQUAM CONGUE FERMENTUM NISL.<br><br>
+MAURIS ACCUMSAN NULLA VEL DIAM. SED IN LACUS UT ENIM ADIPISCING ALIQUET. NULLA VENENATIS. IN PEDE MI, ALIQUET SIT AMET,<br>EUISMOD IN, AUCTOR UT, LIGULA. ALIQUAM DAPIBUS TINCIDUNT METUS. PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR AC, LOREM. VESTIBULUM SED ANTE. DONEC SAGITTIS EUISMOD PURUS. SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT VOLUPTATEM ACCUSANTIUM DOLOREMQUE LAUDANTIUM, TOTAM REM APERIAM, EAQUE IPSA QUAE AB ILLO INVENTORE VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO. NEMO ENIM IPSAM VOLUPTATEM QUIA VOLUPTAS SIT ASPERNATUR AUT ODIT AUT<br>FUGIT, SED QUIA CONSEQUUNTUR MAGNI DOLORES EOS QUI RATIONE VOLUPTATEM SEQUI NESCIUNT. NEQUE PORRO QUISQUAM EST.<br><br>
+<font color="#ffffff"><a href="asfunction:link">{ INFO@COMPANYNAME.COM }</a></font></font>]]></item>
+</section>
+<!-- privacy policy -->  
+
+
+	</content>
