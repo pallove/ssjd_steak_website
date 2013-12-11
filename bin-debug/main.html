@@ -37,7 +37,7 @@
         <script type="text/javascript" src="swfobject.js"></script>
         <script type="text/javascript">
             // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var swfVersionStr = "10.2.0";
+            var swfVersionStr = "11.4.0";
             // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
             var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
@@ -52,7 +52,11 @@
             attributes.align = "middle";
             swfobject.embedSWF(
                 "main.swf", "flashContent", 
+<<<<<<< HEAD
                 "1000", "665", 
+=======
+                "980", "760", 
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
             // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
@@ -67,7 +71,7 @@
         <div id="flashContent">
             <p>
                 To view this page ensure that Adobe Flash Player version 
-                10.2.0 or greater is installed. 
+                11.4.0 or greater is installed. 
             </p>
             <script type="text/javascript"> 
                 var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
@@ -77,14 +81,22 @@
         </div>
         
         <noscript>
+<<<<<<< HEAD
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="665" id="main">
+=======
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="980" height="760" id="main">
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
                 <param name="movie" value="main.swf" />
                 <param name="quality" value="high" />
                 <param name="bgcolor" value="#ffffff" />
                 <param name="allowScriptAccess" value="sameDomain" />
                 <param name="allowFullScreen" value="true" />
                 <!--[if !IE]>-->
+<<<<<<< HEAD
                 <object type="application/x-shockwave-flash" data="main.swf" width="1000" height="665">
+=======
+                <object type="application/x-shockwave-flash" data="main.swf" width="980" height="760">
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
                     <param name="quality" value="high" />
                     <param name="bgcolor" value="#ffffff" />
                     <param name="allowScriptAccess" value="sameDomain" />
@@ -93,7 +105,7 @@
                 <!--[if gte IE 6]>-->
                     <p> 
                         Either scripts and active content are not permitted to run or Adobe Flash Player version
-                        10.2.0 or greater is not installed.
+                        11.4.0 or greater is not installed.
                     </p>
                 <!--<![endif]-->
                     <a href="http://www.adobe.com/go/getflashplayer">

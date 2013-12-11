@@ -2,11 +2,20 @@ package ssjd.indexLayer
 {
 	import com.greensock.TweenLite;
 	import com.greensock.easing.Back;
+<<<<<<< HEAD
 	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+=======
+	import com.greensock.easing.Elastic;
+	
+	import flash.display.Bitmap;
+	import flash.display.DisplayObject;
+	import flash.display.DisplayObjectContainer;
+	import flash.display.MovieClip;
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.events.MouseEvent;
@@ -14,7 +23,15 @@ package ssjd.indexLayer
 	import flash.net.URLRequest;
 	import flash.system.ApplicationDomain;
 	import flash.system.LoaderContext;
+<<<<<<< HEAD
 	import flash.utils.getDefinitionByName;
+=======
+	import flash.text.TextField;
+	import flash.text.TextFormat;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.getTimer;
+	import flash.utils.setTimeout;
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 	
 	import g1.common.loader.SWFLoader;
 	import g1.common.loader.TextLoader;
@@ -25,6 +42,7 @@ package ssjd.indexLayer
 		{
 		}
 		
+<<<<<<< HEAD
 		private var m_testData : MovieClip;
 		private var m_testDataLayer : Sprite = new Sprite();
 		public function init(root : DisplayObjectContainer) : void
@@ -39,6 +57,15 @@ package ssjd.indexLayer
 			m_sceneH = 760;
 			m_halfSceneW = m_sceneW/2 + m_iconOffsetX/2;
 			m_halfSceneH = m_sceneH/2 + 70;
+=======
+		public function init(root : DisplayObjectContainer) : void
+		{
+			m_root = root;
+			m_sceneW = 780;
+			m_sceneH = 760;
+			m_halfSceneW = m_sceneW/2 + m_iconOffsetX;
+			m_halfSceneH = m_sceneH/2;
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 			m_speed = .05;
 			m_root.addEventListener(Event.ENTER_FRAME, onEnrer);
 			
@@ -51,12 +78,20 @@ package ssjd.indexLayer
 		protected function onXmlLoaded(event:Event):void
 		{
 			m_config = XML(m_configLoader.getContent());
+<<<<<<< HEAD
 			m_HeaderBar.setConfig(m_config.child("top"));
 			m_numIcon = m_config.child("icon").length();
 			
 //			for(var i : int = 0; i < m_numIcon; i ++){
 //				m_loadList.push(String(m_config.child("icon")[i].@image));
 //			}
+=======
+			m_numIcon = m_config.child("icon").length();
+			
+			for(var i : int = 0; i < m_numIcon; i ++){
+				m_loadList.push(String(m_config.child("icon")[i].@image));
+			}
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 			
 			m_loader = new SWFLoader();
 			m_loader.addEventListener(Event.COMPLETE, onLoaded);
@@ -104,6 +139,7 @@ package ssjd.indexLayer
 		public function setBaseDir(baseFolder:String):void
 		{
 			m_loadFolder = baseFolder;
+<<<<<<< HEAD
 			m_HeaderBar.setBaseDir(baseFolder);
 			
 			var testLoader : SWFLoader = new SWFLoader();
@@ -141,6 +177,8 @@ package ssjd.indexLayer
 				
 				TweenLite.from(iconCache.displayObject,  i/10 + 0.3 , {y : m_sceneH + 100,  delay : i * .05,  ease :  Back.easeOut ,onStart : onTweenStart, onStartParams : [iconCache], onComplete : onTweenOver, onCompleteParams: [iconCache,i]});
 			}
+=======
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 		}
 		
 		private function onLoaded(e:Event) : void
@@ -151,7 +189,10 @@ package ssjd.indexLayer
 				loadNext();
 			}else{
 				createIcon();
+<<<<<<< HEAD
 				m_HeaderBar.show();
+=======
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 			}
 		}
 		
@@ -189,14 +230,19 @@ package ssjd.indexLayer
 				iconCache.displayObject.addChild(iconCache.target); 
 				
 				//加载skin
+<<<<<<< HEAD
 				var skin : DisplayObject = new (getDefinitionByName("icon" + int(i + 1)) as Class);
 				skin.width = 88;
 				skin.height = 78;
+=======
+				var skin : DisplayObject = m_iconSkinArr[i];
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 				iconCache.bg = skin;
 				iconCache.displayObject.addChild(skin); 
 				skin.alpha = 0;
 				
 				//创建文本
+<<<<<<< HEAD
 //				var format : TextFormat = new TextFormat();
 //				format.color = 0xFFFFFF;
 				
@@ -214,11 +260,30 @@ package ssjd.indexLayer
 				
 				iconCache.displayObject.name = i.toString();
 				iconCache.displayObject.mouseChildren = false;
+=======
+				var format : TextFormat = new TextFormat();
+				format.color = 0xFFFFFF;
+				
+				var tf : TextField = new TextField();
+				tf.selectable = tf.mouseEnabled = false;
+				tf.defaultTextFormat = format;
+				tf.text = m_config.child("icon")[i].@cation;
+				tf.width = tf.textWidth + 5;
+				tf.height = tf.textHeight + 5;
+				tf.x = 88 - tf.width >> 1;
+				tf.y = skin.height - tf.height;
+				tf.alpha = 0;
+				iconCache.tf = tf;
+				iconCache.displayObject.addChild(tf);
+				
+				iconCache.displayObject.name = i.toString();
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 				
 				//初始化按钮位置
 				iconCache.displayObject.x = m_halfSceneW + Math.sin(iconCache.index) * m_iconToCenterDis * 2 - m_iconToCenterDis;
 				iconCache.displayObject.y = m_halfSceneH+ Math.cos(iconCache.index) * m_iconToCenterDis * 2 - m_iconToCenterDis;
 				
+<<<<<<< HEAD
 				m_rootLayer.addChild(iconCache.displayObject);
 				m_iconList[i] = iconCache;
 				
@@ -226,6 +291,27 @@ package ssjd.indexLayer
 			}
 		}
 		
+=======
+				m_root.addChild(iconCache.displayObject);
+				m_iconList[i] = iconCache;
+				
+				TweenLite.from(iconCache.displayObject,  i/10 + 0.3 , {y : m_sceneH + 100,  delay : i * .05,  ease :  Back.easeOut ,onStart : onTweenStart, onStartParams : [iconCache], onComplete : onTweenOver, onCompleteParams: [iconCache,i]});
+				iconCache.target.addFrameScript(19, tweenSkinAndTf);
+			}
+		}
+		
+		private var tweenSkinIndex : int = 0;
+		private function tweenSkinAndTf() : void
+		{
+			var cache : IconCache = m_iconList[tweenSkinIndex++];
+			cache.bg.alpha = 1;
+			TweenLite.from(cache.bg,.5,{alpha:0});
+			
+			cache.tf.alpha = 1;
+			TweenLite.from(cache.tf,.5,{alpha:0});
+		}
+		
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 		private function onTweenStart(target : IconCache) : void
 		{
 			target.target.play();
@@ -233,9 +319,12 @@ package ssjd.indexLayer
 		
 		private function onTweenOver(target : IconCache, index : int) : void
 		{
+<<<<<<< HEAD
 			target.bg.alpha = .9;
 			TweenLite.from(target.bg,.5,{alpha:0,delay:1});
 			
+=======
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 			target.displayObject.buttonMode = true;
 			target.displayObject.addEventListener(MouseEvent.CLICK, onMouseEvent);
 			target.displayObject.addEventListener(MouseEvent.MOUSE_OVER, onMouseEvent);
@@ -247,6 +336,7 @@ package ssjd.indexLayer
 		
 		protected function onMouseEvent(event:MouseEvent):void
 		{
+<<<<<<< HEAD
 			switch(event.type)
 			{
 				case MouseEvent.CLICK:
@@ -279,6 +369,12 @@ package ssjd.indexLayer
 			}
 		}
 		
+=======
+			// TODO Auto-generated method stub
+			
+		}
+		
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 		private function onError(e:IOErrorEvent) : void
 		{
 			trace("加载失败",e.toString(),this);
@@ -291,17 +387,27 @@ package ssjd.indexLayer
 		
 		private static var m_instance : IndexLayer;
 		
+<<<<<<< HEAD
 		private var m_HeaderBar : HeaderBar = new HeaderBar(); //顶部的三个按钮
 		
+=======
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 		private var m_sceneW : int;
 		private var m_sceneH : int;
 		private var m_halfSceneW : int;
 		private var m_halfSceneH : int;
+<<<<<<< HEAD
 		private var m_iconToCenterDis : int = 80;
 		private var m_iconOffsetX : Number = 222.8;
 		private var m_speed : Number;
 		private var m_config : XML;
 		private var m_rootLayer : Sprite = new Sprite();
+=======
+		private var m_iconToCenterDis : int = 100;
+		private var m_iconOffsetX : Number = 222.8;
+		private var m_speed : Number;
+		private var m_config : XML;
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 		
 		private var m_needRotation : Boolean = false;
 		private var m_isLoadIcon : Boolean = false;

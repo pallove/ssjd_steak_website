@@ -12,10 +12,13 @@ package
 	import flash.net.URLRequest;
 	import flash.net.URLRequestMethod;
 	import flash.net.URLVariables;
+<<<<<<< HEAD
 	import flash.system.ApplicationDomain;
 	import flash.system.LoaderContext;
 	
 	import g1.common.loader.SWFLoader;
+=======
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 	
 	import ssjd.bgLayer.BgLayer;
 	import ssjd.contentLayer.ContentLayer;
@@ -23,7 +26,11 @@ package
 	import ssjd.indexLayer.IndexLayer;
 	import ssjd.loadingLayer.LoadingLayer;
 	
+<<<<<<< HEAD
 	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="1000", height="665")]
+=======
+	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="980", height="760")]
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
 	
 	public class main extends Sprite
 	{
@@ -73,6 +80,10 @@ package
 			indexLayer.setBaseDir("./res/index/");
 			indexLayer.init(addChild(new Sprite()) as Sprite);
 			
+			indexLayer = new IndexLayer();
+			indexLayer.setBaseDir("./res/index/");
+			indexLayer.init(addChild(new Sprite()) as Sprite);
+			
 			loadingLayer = new LoadingLayer();
 			loadingLayer.init(addChild(new Sprite()) as Sprite);
 			
@@ -81,6 +92,7 @@ package
 			//管理密码:1234567
 			//http://www.dreamfairy.cn/test/zz/system.html
 			
+<<<<<<< HEAD
 			var loader:URLLoader = new URLLoader();  
 			//			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/savemsg.php");  
 			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/getList.php");  
@@ -109,6 +121,24 @@ package
 		}
 		
 		private var testSwf : MovieClip;
+=======
+			/**
+			var loader:URLLoader = new URLLoader();  
+			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/savemsg.php");  
+			URLSt.method = URLRequestMethod.POST;  
+			var values:URLVariables = new URLVariables();  
+			values.Name  = "超超";  
+			values.Content = "你大爷";  
+			URLSt.data = values;  
+			loader.addEventListener(Event.COMPLETE, sendMsg);  
+			loader.load(URLSt);  **/
+		} 
+>>>>>>> 944d92368b2be4b9d5929b1d0476d1af17598a0b
+		
+		protected function sendMsg(event:Event):void
+		{
+			trace("发送聊天成功",event.toString());
+		}
 		
 		private var bgLayer : BgLayer;
 		private var indexLayer : IndexLayer;
