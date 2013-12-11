@@ -1,6 +1,7 @@
 package ssjd.contentLayer.menu
 {
 	import com.greensock.TweenLite;
+	import com.greensock.easing.Back;
 	import com.greensock.plugins.TintPlugin;
 	import com.greensock.plugins.TweenPlugin;
 	
@@ -13,6 +14,7 @@ package ssjd.contentLayer.menu
 	import flash.events.IOErrorEvent;
 	import flash.events.MouseEvent;
 	import flash.net.URLRequest;
+	import flash.sensors.Accelerometer;
 	import flash.system.ApplicationDomain;
 	import flash.system.LoaderContext;
 	import flash.text.TextField;
@@ -24,7 +26,10 @@ package ssjd.contentLayer.menu
 	
 	import ssjd.contentLayer.ContentLayer;
 	import ssjd.contentLayer.IContent;
+	import ssjd.controlLayer.ControlLayer;
 	import ssjd.effect.BothHeadEffect;
+	import ssjd.effect.CenterFloodEffect;
+	import ssjd.effect.FloodToCenterEffect;
 
 	public class Menu implements IContent
 	{
@@ -50,17 +55,27 @@ package ssjd.contentLayer.menu
 		
 		public function init(display:DisplayObjectContainer):void
 		{
-			TweenPlugin.activate([TintPlugin]);
+
 			
 			m_items = new Vector.<MenuItem>();
 			m_loadImageQueue = new Vector.<MenuItem>();
 			
 			m_root = new Sprite();
-			m_content = display;
-			m_root.addChild(m_content);			
+			m_content = display as MovieClip;
+			m_content.visible = false;
+			m_root.addChild(m_content);
 			
-			m_bigContent = new Sprite();
-			m_root.addChild(m_bigContent);
+			m_bigContent = m_content.bigShow;
+			m_bigContent.visible = false;
+			m_bigContent.mouseChildren = false;
+			m_bigContent.addEventListener(MouseEvent.CLICK, function(e : MouseEvent) : void
+			{
+				new FloodToCenterEffect(m_content, m_bigContent, function() : void
+				{
+					m_bigContent.visible = false;
+					checkMiniControl(m_currentPage, m_totalPage);					
+				});
+			});
 			
 			m_effect = new Sprite();
 			m_root.addChild(m_effect);
@@ -91,6 +106,8 @@ package ssjd.contentLayer.menu
 				
 				m_items.push(item);
 			}
+			// 总页数
+			m_totalPage = Math.ceil(m_items.length / PAGE_SIZE);
 			
 			// 图片加载
 			var imgLoader : SWFLoader = new SWFLoader();
@@ -104,6 +121,8 @@ package ssjd.contentLayer.menu
 		private function __onImgLoaded(event:Event):void
 		{
 			m_bg = (event.target as SWFLoader).getContent() as Bitmap;
+			m_bg.visible = false;
+			m_root.addChildAt(m_bg, 0);
 			
 			ContentLayer.singleton.onItemInit(this);
 		}
@@ -113,9 +132,9 @@ package ssjd.contentLayer.menu
 		{ 
 			// 缓动效果
 			var bgLeft : Bitmap = new Bitmap(m_bg.bitmapData);
-			bgLeft.x = -20;
+			bgLeft.x = -50;
 			var bgRight : Bitmap = new Bitmap(m_bg.bitmapData);
-			bgRight.x = 20;
+			bgRight.x = 50;
 			
 			var effect : BothHeadEffect = new BothHeadEffect(m_effect, bgLeft, bgRight, 100, m_bg.width, m_bg.height, onEffectEnd);
 			m_effect.addChild(bgLeft);
@@ -125,11 +144,15 @@ package ssjd.contentLayer.menu
 		private function onEffectEnd():void
 		{
 			SpriteUtils.clearContainer(m_effect);
-			m_root.addChildAt(m_bg, 0);
+			
+			m_bg.visible = true;
+			m_content.visible = true;
 			
 			showPage(1);
 			
-			startLoadMiniImage();
+			
+			
+			ControlLayer.singleton.setControlRange(55, m_root.stage.stageWidth - 55);
 		}
 		
 		private function startLoadMiniImage():void
@@ -138,6 +161,7 @@ package ssjd.contentLayer.menu
 				m_smllLoadItem = m_loadImageQueue.pop();
 				if (m_smllLoadItem.thumbsnailData) {
 					fillMiniImage(m_smllLoadItem);
+					startLoadMiniImage();
 				}
 				else {
 					m_smallLoader.load(new URLRequest(m_smllLoadItem.thumbsnail), null);
@@ -145,10 +169,11 @@ package ssjd.contentLayer.menu
 			}
 		}
 		
-		
 		private function __onSmallLoaded(event:Event):void
 		{
 			m_smllLoadItem.thumbsnailData = m_smallLoader.getContent();
+			m_smllLoadItem.thumbsnailData.width = 169;
+			m_smllLoadItem.thumbsnailData.height = 253;
 			fillMiniImage(m_smllLoadItem);
 			startLoadMiniImage();
 		}		
@@ -168,12 +193,35 @@ package ssjd.contentLayer.menu
 			item.index = -1;
 		}
 		
+		private function checkMiniControl(currentPage : int, totalPage : int) : void
+		{
+			var haveLeft : Boolean = false;
+			var haveRight : Boolean = false;
+			if (m_totalPage > 1) {
+				if (m_currentPage <= m_totalPage) {
+					if (m_currentPage == 1) {
+						haveRight = true;
+					}
+					else if(m_currentPage == m_totalPage) {
+						haveLeft = true;
+					}
+					else {
+						haveLeft = haveRight = true;
+					}
+				}
+			}
+			
+			ControlLayer.singleton.setRightCall(haveRight ? showNextPage : null);
+			ControlLayer.singleton.setLeftCall(haveLeft ? showPrevPage : null);			
+		}
+		
 		private function showPage(pageNo : int) : void
 		{
 			m_currentPage = pageNo;
 			
-			var size : int = m_items.length % PAGE_SIZE;
-			if (size == 0) size = PAGE_SIZE;
+			checkMiniControl(m_currentPage, m_totalPage);
+			
+			var size : int = m_items.length > PAGE_SIZE * m_currentPage ? PAGE_SIZE : m_items.length % PAGE_SIZE;
 			
 			//　清除加载队列
 			m_loadImageQueue.splice(0, m_loadImageQueue.length);
@@ -185,19 +233,33 @@ package ssjd.contentLayer.menu
 					item.overblock.visible = false;
 					item.addEventListener(MouseEvent.MOUSE_OVER, Delegate.create(__onItemOver, item));
 					item.addEventListener(MouseEvent.MOUSE_OUT, Delegate.create(__onItemOut, item));
-					item.addEventListener(MouseEvent.CLICK, Delegate.create(__onItemClick, index));
+					item.addEventListener(MouseEvent.CLICK, Delegate.create(__onItemClick, index)); 
 					item.visible = true;
 					
 					var menuItem : MenuItem = m_items[index];
+					var tf : TextField = item.namebar.title as TextField;
+					tf.text = menuItem.title;
+					
 					menuItem.index = i;
 					m_loadImageQueue.push(menuItem);
 				}
 				else {
+					menuItem.index = -1;
 					item.visible = false;
 				}
 			}
+			startLoadMiniImage();
 		}
 		
+		private function showNextPage() : void
+		{
+			showPage(m_currentPage + 1);
+		}
+		
+		private function showPrevPage() : void
+		{
+			showPage(m_currentPage - 1);
+		}
 		
 		private function __onBigLoaded(event:Event):void
 		{
@@ -208,13 +270,23 @@ package ssjd.contentLayer.menu
 		// 显示大图
 		private function showBigContent(item : MenuItem):void
 		{
+			m_bigContent.desBar.enName.text = "beef test en name";
+			m_bigContent.desBar.des.text = item.des;
+			SpriteUtils.clearContainer(m_bigContent.container);
+			m_bigContent.container.addChild(item.showImageData);
+			m_bigContent.visible = true;
 			
+			m_bigContent.container.alpha = 0;
+			m_bigContent.desBar.y += m_bigContent.desBar.height;
+			TweenLite.to(m_bigContent.container, 0.5, {alpha:1});
+			TweenLite.to(m_bigContent.desBar, 0.8, {ease:Back.easeOut, y:m_bigContent.desBar.y - m_bigContent.desBar.height});
 		}		
 		
 		private function __onItemClick(index : int):void
 		{
+			ControlLayer.singleton.setLeftCall(null);
+			ControlLayer.singleton.setRightCall(null);
 			startLoadBigItem(index);
-
 		}
 		
 		// 开始加载新的大图项
@@ -250,8 +322,10 @@ package ssjd.contentLayer.menu
 			m_baseDir = dir;
 		}		
 		
-		private static const overBgColor : int = 0x332B29;
-		private static const outBgColor : int = 0xd6b488;
+		private static const overBgColor : int = 0x534532;
+		private static const outBgColor : int = 0xdab866;
+		private static const overTextColor : int = 0xb79757;
+		private static const outTextColor : int = 0x463b22; 
 		private static const PAGE_SIZE : int = 10;
 		
 		private var m_smllLoadItem : MenuItem;
@@ -264,9 +338,9 @@ package ssjd.contentLayer.menu
 		private var m_pageSize : int;
 		private var m_baseDir : String;
 		
-		private var m_bigContent : DisplayObjectContainer;
+		private var m_bigContent : MovieClip;
 		private var m_root : DisplayObjectContainer;
-		private var m_content : DisplayObjectContainer;
+		private var m_content : MovieClip;
 		private var m_effect : Sprite;
 		private var m_bg : Bitmap;
 		

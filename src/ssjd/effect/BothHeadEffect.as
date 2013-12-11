@@ -1,6 +1,7 @@
 package ssjd.effect
 {
 	import com.greensock.TweenLite;
+	import com.greensock.easing.Circ;
 	
 	import flash.display.Bitmap;
 	import flash.display.DisplayObject;
@@ -28,7 +29,7 @@ package ssjd.effect
 			leftMaskRect.graphics.endFill();
 			leftMaskRect.width = beginWidth;
 			left.mask = leftMaskRect;
-			leftMaskRect.x = endWidth / 2 - beginWidth;
+			leftMaskRect.x = endWidth / 2 - beginWidth * 1.5;
 			con.addChild(leftMaskRect);
 			
 			var rightMaskRect : Sprite = new Sprite();
@@ -37,7 +38,7 @@ package ssjd.effect
 			rightMaskRect.graphics.endFill();
 			rightMaskRect.width = beginWidth;
 			right.mask = rightMaskRect;
-			rightMaskRect.x = endWidth / 2 + beginWidth;
+			rightMaskRect.x = endWidth / 2 + beginWidth * 1.5;
 			con.addChild(rightMaskRect);
 			
 			left.alpha = right.alpha = 0.2;
@@ -55,10 +56,10 @@ package ssjd.effect
 			};
 			
 			var useTime : Number = 1;
-			TweenLite.to(leftMaskRect, useTime, {x : 0, width : endWidth});
-			TweenLite.to(rightMaskRect, useTime, {x : 0, width : endWidth});
-			TweenLite.to(left, 1, {alpha : useTime, x : 0});
-			TweenLite.to(right, 1, {alpha : useTime, x : 0, onComplete:onFinishTween});	
+			TweenLite.to(leftMaskRect, useTime, {x : 0, ease:Circ.easeOut, width : endWidth});
+			TweenLite.to(rightMaskRect, useTime, {x : 0, ease:Circ.easeOut, width : endWidth});
+			TweenLite.to(left, useTime, {alpha : 1, x : 0});
+			TweenLite.to(right, useTime, {alpha : 1, x : 0, onComplete:onFinishTween});	
 		}
 	}
 }

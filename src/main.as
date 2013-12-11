@@ -1,5 +1,9 @@
 package
 {
+	import com.greensock.plugins.TintPlugin;
+	import com.greensock.plugins.TweenPlugin;
+	
+	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
@@ -8,6 +12,10 @@ package
 	import flash.net.URLRequest;
 	import flash.net.URLRequestMethod;
 	import flash.net.URLVariables;
+	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
+	
+	import g1.common.loader.SWFLoader;
 	
 	import ssjd.bgLayer.BgLayer;
 	import ssjd.contentLayer.ContentLayer;
@@ -15,12 +23,34 @@ package
 	import ssjd.indexLayer.IndexLayer;
 	import ssjd.loadingLayer.LoadingLayer;
 	
-	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="980", height="760")]
+	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="1000", height="665")]
 	
 	public class main extends Sprite
 	{
 		public function main()
 		{
+			var loader : SWFLoader = new SWFLoader();
+			loader.addEventListener(Event.COMPLETE, function(e : Event) : void
+			{
+				loader.removeEventListener(Event.COMPLETE, arguments.callee);
+				stage ? init() : addEventListener(Event.ADDED_TO_STAGE, init);
+			});
+			
+			var context : LoaderContext = new LoaderContext();
+			context.applicationDomain = ApplicationDomain.currentDomain;
+			loader.load(new URLRequest("./res/loadAsset.swf"), context); 
+		} 
+		
+		private function init(e:Event = null) : void
+		{
+			TweenPlugin.activate([TintPlugin]);
+			
+			var maskSprite : Sprite = new Sprite();
+			maskSprite.graphics.beginFill(0xff0000);
+			maskSprite.graphics.drawRect(0, 0, 1000, 665);
+			maskSprite.graphics.endFill();
+			
+//			this.mask = maskSprite;
 			
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
@@ -34,10 +64,10 @@ package
 			
 			contentLayer = new ContentLayer();
 			contentLayer.setBaseDir("./res/");
-			contentLayer.init(addChild(new Sprite()) as Sprite);
+			contentLayer.init(addChild(new Sprite()) as Sprite);			
 			
 			controlLayer = new ControlLayer();
-			controlLayer.init(addChild(new Sprite()) as Sprite);
+			controlLayer.init(addChild(new Sprite()) as Sprite);			
 			
 			indexLayer = new IndexLayer();
 			indexLayer.setBaseDir("./res/index/");
@@ -51,22 +81,34 @@ package
 			//管理密码:1234567
 			//http://www.dreamfairy.cn/test/zz/system.html
 			
-			/**
 			var loader:URLLoader = new URLLoader();  
-			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/savemsg.php");  
+			//			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/savemsg.php");  
+			var URLSt:URLRequest = new URLRequest("http://www.dreamfairy.cn/test/zz/getList.php");  
 			URLSt.method = URLRequestMethod.POST;  
 			var values:URLVariables = new URLVariables();  
-			values.Name  = "超超";  
-			values.Content = "你大爷";  
+			//			values.Name  = "超超";  
+			//			values.Content = "你大爷";  
+			values.pwd = "1234567";
 			URLSt.data = values;  
 			loader.addEventListener(Event.COMPLETE, sendMsg);  
-			loader.load(URLSt);  **/
-		} 
+			loader.load(URLSt);  	
+		}
 		
 		protected function sendMsg(event:Event):void
 		{
-			trace("发送聊天成功",event.toString());
+			trace("发送聊天成功",event.toString(),event.target.data);
+			/*var data : String = JSON.parse(event.target.data) as String;
+			var target : Array =  JSON.parse(data) as Array;
+			for each(var msg : Object in target){
+				trace("Id",msg.Id);
+				trace("Name",msg.Name);
+				trace("CreateTime",msg.CreateTime);
+				trace("Content",msg.Content);
+				trace("--------");
+			}*/
 		}
+		
+		private var testSwf : MovieClip;
 		
 		private var bgLayer : BgLayer;
 		private var indexLayer : IndexLayer;
